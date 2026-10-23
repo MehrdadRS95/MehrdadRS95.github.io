@@ -14,6 +14,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/styles.css" />
+  <!-- Scoped styles for the homepage media highlight. -->
+  <style>
+    .media-feature { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr); gap: 0; padding: 0; overflow: hidden; }
+    .media-feature-image { display: flex; flex-direction: column; margin: 0; min-width: 0; }
+    .media-feature-image img { display: block; width: 100%; height: 100%; min-height: 330px; object-fit: cover; }
+    .media-feature-image figcaption { padding: 9px 16px; font-size: 0.75rem; color: var(--text-muted, #6b7280); }
+    .media-feature-copy { padding: clamp(24px, 4vw, 42px); display: flex; flex-direction: column; justify-content: center; }
+    .media-feature-copy h3 { margin: 10px 0 16px; font-size: clamp(1.45rem, 2.3vw, 2.05rem); line-height: 1.2; }
+    .media-feature-copy p { margin: 0 0 16px; }
+    .media-feature-copy .proj-links { margin-top: 7px; }
+    @media (max-width: 760px) {
+      .media-feature { grid-template-columns: 1fr; }
+      .media-feature-image img { min-height: 0; aspect-ratio: 16 / 10; }
+    }
+  </style>
 </head>
 <body>
 
@@ -286,6 +301,40 @@
           </div>
         </article>
       </div>
+    </div>
+  </section>
+
+  <!-- ===== NEWS & MEDIA HIGHLIGHTS ===== -->
+  <section class="section" id="news-media" style="padding-top: 0;">
+    <div class="container">
+      <div class="reveal">
+        <span class="eyebrow">In the news</span>
+        <h2 class="section-title">News &amp; Media Highlights</h2>
+        <p class="section-lead">University news and media coverage featuring my research and academic collaborations.</p>
+      </div>
+
+      <article class="card media-feature reveal" style="margin-top: 28px;">
+        <figure class="media-feature-image">
+          <a href="https://www.odu.edu/article/old-dominion-university-researchers-partner-us-cyber-command-to-solve-national" target="_blank" rel="noopener noreferrer" aria-label="Read the Old Dominion University news article">
+            <img src="https://www.odu.edu/sites/default/files/images/2026-cybersecurity-team-24.jpg"
+                 alt="Old Dominion University cybersecurity research team pictured together in a server room"
+                 loading="lazy" decoding="async" />
+          </a>
+          <figcaption>Photo: Old Dominion University · <a href="https://www.odu.edu/article/old-dominion-university-researchers-partner-us-cyber-command-to-solve-national" target="_blank" rel="noopener noreferrer">Original article</a></figcaption>
+        </figure>
+        <div class="media-feature-copy">
+          <span class="eyebrow">ODU News · January 29, 2026</span>
+          <h3>Old Dominion University Researchers Partner with U.S. Cyber Command to Solve National Cybersecurity Challenges</h3>
+          <p>Old Dominion University featured our research team, including me, in its coverage of a collaboration with U.S. Cyber Command focused on applying artificial intelligence to cybersecurity challenges involving critical infrastructure.</p>
+          <p>I shared my perspective on how our collaborative research environment and technical expertise position the team to address national cybersecurity challenges.</p>
+          <div class="proj-links">
+            <a class="pill" href="https://www.odu.edu/article/old-dominion-university-researchers-partner-us-cyber-command-to-solve-national" target="_blank" rel="noopener noreferrer">
+              Read the ODU article
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg>
+            </a>
+          </div>
+        </div>
+      </article>
     </div>
   </section>
 
