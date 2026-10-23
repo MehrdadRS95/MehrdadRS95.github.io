@@ -24,6 +24,11 @@
     .media-feature-copy h3 { margin: 10px 0 16px; font-size: clamp(1.45rem, 2.3vw, 2.05rem); line-height: 1.2; }
     .media-feature-copy p { margin: 0 0 16px; }
     .media-feature-copy .proj-links { margin-top: 7px; }
+    /* Responsive, publisher-hosted video in the media highlights section. */
+    .media-feature-video { display: flex; flex-direction: column; margin: 0; min-width: 0; }
+    .media-video-frame { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #101820; overflow: hidden; }
+    .media-video-frame iframe { display: block; position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .media-feature-video figcaption { padding: 9px 16px; font-size: 0.75rem; color: var(--text-muted, #6b7280); }
     @media (max-width: 760px) {
       .media-feature { grid-template-columns: 1fr; }
       .media-feature-image img { min-height: 0; aspect-ratio: 16 / 10; }
@@ -330,6 +335,37 @@
           <div class="proj-links">
             <a class="pill" href="https://www.odu.edu/article/old-dominion-university-researchers-partner-us-cyber-command-to-solve-national" target="_blank" rel="noopener noreferrer">
               Read the ODU article
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 13News Now video story — publisher-hosted video player -->
+      <article class="card media-feature reveal" style="margin-top: 24px;">
+        <figure class="media-feature-video">
+          <div class="media-video-frame">
+            <iframe src="https://media.13newsnow.com/embeds/video/responsive/291-b033ad97-2fa3-4d2e-b58b-5cdc7d27a6f3/iframe"
+                    title="13News Now: Old Dominion University to offer cybersecurity doctorate program"
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+                    allowfullscreen></iframe>
+          </div>
+          <figcaption>Video: 13News Now (WVEC) · <a href="https://www.13newsnow.com/video/news/local/mycity/norfolk/old-dominion-university-cybersecurity-doctorate-program/291-b033ad97-2fa3-4d2e-b58b-5cdc7d27a6f3" target="_blank" rel="noopener noreferrer">Open video on 13News Now</a></figcaption>
+        </figure>
+        <div class="media-feature-copy">
+          <span class="eyebrow">13News Now · July 2, 2026 · Video</span>
+          <h3>ODU Expands Cybersecurity Education with New Doctoral Program</h3>
+          <p>13News Now reported on Old Dominion University's launch of a Ph.D. program in cybersecurity, highlighting the field's rapid evolution and the importance of interdisciplinary research.</p>
+          <p>The segment offers a look at ODU's cybersecurity research environment, where my work focuses on AI security, LLM agents, and Model Context Protocol security.</p>
+          <div class="proj-links">
+            <a class="pill" href="https://www.13newsnow.com/video/news/local/mycity/norfolk/old-dominion-university-cybersecurity-doctorate-program/291-b033ad97-2fa3-4d2e-b58b-5cdc7d27a6f3" target="_blank" rel="noopener noreferrer">
+              Watch video on 13News Now
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg>
+            </a>
+            <a class="pill" href="https://www.13newsnow.com/article/news/local/mycity/norfolk/old-dominion-university-odu-cybersecurity-phd-norfolk-virginia/291-3aec1079-be70-42bd-8a8b-87429848da0f" target="_blank" rel="noopener noreferrer">
+              Read article
               <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg>
             </a>
           </div>
