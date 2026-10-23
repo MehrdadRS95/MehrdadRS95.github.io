@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Research &amp; Publications — Mehrdad Rostamzadeh</title>
-  <meta name="description" content="Research and publications by Mehrdad Rostamzadeh on Model Context Protocol security, adversarial ML, time-series forecasting, and demand prediction." />
+  <meta name="description" content="Research and publications by Mehrdad Rostamzadeh on AI agent security, staged trust attacks, adversarial context, MCP defense placement, and machine learning." />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -44,7 +44,7 @@
     <div class="container reveal in">
       <span class="eyebrow">Research</span>
       <h1>Research &amp; publications</h1>
-      <p class="section-lead">My work spans AI security for emerging agent protocols and applied machine learning for forecasting and demand prediction — from adversarial defense taxonomies to meta-learning across forecasting algorithms.</p>
+      <p class="section-lead">My research focuses on securing LLM-powered agents, particularly the Model Context Protocol (MCP). I study staged trust attacks, adversarial context, and defense strategies across agent-tool boundaries, building on earlier work in time-series forecasting and applied machine learning.</p>
     </div>
   </header>
 
@@ -57,16 +57,16 @@
       </div>
       <div class="focus" style="margin-top: 24px;">
         <div class="focus-item reveal">
-          <h4>AI Agent &amp; MCP Security</h4>
-          <p>Systematizing where defenses should sit across the Model Context Protocol attack surface, and analyzing coverage against agent-level threats.</p>
+          <h4>Staged Trust Attacks on MCP Servers</h4>
+          <p>Investigating how malicious MCP servers can establish trust through benign interactions before shifting their behavior, and evaluating defenses against these temporal attacks.</p>
         </div>
         <div class="focus-item reveal">
-          <h4>Adversarial Robustness</h4>
-          <p>Hardening ML and LLM-based systems against adversarial inputs, prompt injection, and evasion — from threat modeling to automated defense.</p>
+          <h4>Adversarial Context &amp; LLM Robustness</h4>
+          <p>Benchmarking the robustness of LLM-powered agents to adversarial context across Model Context Protocol layers, with a focus on cross-boundary threats and security evaluation.</p>
         </div>
         <div class="focus-item reveal">
-          <h4>Defense Placement &amp; Coverage</h4>
-          <p>Building taxonomies and coverage-analysis frameworks that make defense trade-offs explicit and measurable for practitioners.</p>
+          <h4>Defense Placement &amp; Threat Coverage</h4>
+          <p>Mapping security controls to the MCP attack surface and studying which threats different defense placements can mitigate, along with gaps in their coverage.</p>
         </div>
       </div>
     </div>
@@ -77,33 +77,60 @@
     <div class="container">
       <div class="reveal">
         <span class="eyebrow">Publications</span>
-        <h2 class="section-title">Selected papers</h2>
-        <p class="section-lead">Author name shown in bold. Links go to the official venue or preprint.</p>
+        <h2 class="section-title">Publications &amp; research</h2>
+        <p class="section-lead">Five research publications across AI security, machine learning, and forecasting. My name is highlighted in bold; each entry links to its paper.</p>
       </div>
 
       <div class="grid" style="margin-top: 28px; gap: 18px;">
-
-        <!-- MCP-DPT -->
+        <!-- TrustShiftProbe -->
         <article class="pub reveal">
-          <div class="pub-year">2026<small>ARXIV</small></div>
+          <div class="pub-year">2026<small>IEEE TPS</small></div>
           <div>
-            <h3>MCP-DPT: A Defense-Placement Taxonomy and Coverage Analysis for Model Context Protocol Security</h3>
-            <p class="authors"><b>M. Rostamzadeh</b>, S. Narula, N. Birhan, M. Ghasemigol, D. Takabi</p>
-            <p class="venue">Preprint · arXiv:2604.07551</p>
+            <h3>TrustShiftProbe: Characterizing, Benchmarking, and Defending Staged Trust Attacks on MCP Servers</h3>
+            <p class="authors"><b>M. Rostamzadeh</b>, S. Narula, M. Ghasemigol, D. Takabi</p>
+            <p class="venue">IEEE International Conference on Trust, Privacy and Security (TPS) · Accepted</p>
             <div class="pub-links">
-              <a class="pill" href="https://arxiv.org/abs/2604.07551" target="_blank" rel="noopener">
+              <a class="pill" href="https://arxiv.org/abs/2608.23763" target="_blank" rel="noopener noreferrer">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                arXiv abstract
-              </a>
-              <a class="pill" href="assets/MCP-DPT.pdf" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                PDF
+                arXiv:2608.23763
               </a>
             </div>
           </div>
         </article>
 
-        <!-- BWE -->
+        <!-- COPEX -->
+        <article class="pub reveal">
+          <div class="pub-year">2026<small>NeurIPS</small></div>
+          <div>
+            <h3>COPEX: Benchmarking LLM Robustness to Adversarial Context Across Model Context Protocol Layers</h3>
+            <p class="authors">N. Birhan, <b>M. Rostamzadeh</b>, S. Narula, M. Nazzal, M. Ghasemigol, D. Takabi</p>
+            <p class="venue">NeurIPS Workshop on Agents in the Wild (AIWILD) · Accepted</p>
+            <div class="pub-links">
+              <a class="pill" href="https://arxiv.org/abs/2610.04378" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                arXiv:2610.04378
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- MCP-DPT -->
+        <article class="pub reveal">
+          <div class="pub-year">2026<small>arXiv</small></div>
+          <div>
+            <h3>MCP-DPT: A Defense-Placement Taxonomy and Coverage Analysis for Model Context Protocol Security</h3>
+            <p class="authors"><b>M. Rostamzadeh</b>, S. Narula, N. Birhan, M. Ghasemigol, D. Takabi</p>
+            <p class="venue">arXiv preprint · arXiv:2604.07551</p>
+            <div class="pub-links">
+              <a class="pill" href="https://arxiv.org/abs/2604.07551" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                arXiv:2604.07551
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- An Analysis of the BWE-Associated Costs -->
         <article class="pub reveal">
           <div class="pub-year">2020<small>IFAC</small></div>
           <div>
@@ -111,7 +138,7 @@
             <p class="authors">Z. M. Samiee, <b>M. Rostamzadeh</b>, O. F. Valilai</p>
             <p class="venue">IFAC-PapersOnLine, Vol. 53(2), pp. 10836–10842</p>
             <div class="pub-links">
-              <a class="pill" href="https://www.sciencedirect.com/science/article/pii/S2405896320336363" target="_blank" rel="noopener">
+              <a class="pill" href="https://www.sciencedirect.com/science/article/pii/S2405896320336363" target="_blank" rel="noopener noreferrer">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
                 ScienceDirect
               </a>
@@ -119,29 +146,24 @@
           </div>
         </article>
 
-        <!-- Meta-learning -->
+        <!-- Time Series Model Selection with a Meta-Learning Approach -->
         <article class="pub reveal">
-          <div class="pub-year">2019<small>ARXIV</small></div>
+          <div class="pub-year">2019<small>arXiv</small></div>
           <div>
             <h3>Time Series Model Selection with a Meta-Learning Approach: Evidence from a Pool of Forecasting Algorithms</h3>
             <p class="authors">S. Barak, M. Nasiri, <b>M. Rostamzadeh</b></p>
-            <p class="venue">Preprint · arXiv:1908.08489</p>
+            <p class="venue">arXiv preprint · arXiv:1908.08489</p>
             <div class="pub-links">
-              <a class="pill" href="https://arxiv.org/abs/1908.08489" target="_blank" rel="noopener">
+              <a class="pill" href="https://arxiv.org/abs/1908.08489" target="_blank" rel="noopener noreferrer">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                arXiv abstract
-              </a>
-              <a class="pill" href="assets/Time-Series-Meta-Learning.pdf" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                PDF
+                arXiv:1908.08489
               </a>
             </div>
           </div>
         </article>
-
       </div>
 
-      <!-- Scholar links -->
+      <!-- Profile links; replace placeholder Scholar and ORCID URLs when available -->
       <div class="grid grid-3 reveal" style="margin-top: 28px;">
         <a class="pill" href="https://scholar.google.com/" target="_blank" rel="noopener" style="justify-content:center; padding: 12px;">Google Scholar profile → update link</a>
         <a class="pill" href="https://orcid.org/" target="_blank" rel="noopener" style="justify-content:center; padding: 12px;">ORCID → update link</a>
@@ -155,7 +177,7 @@
     <div class="container">
       <div class="banner reveal">
         <h2>Want to read more or collaborate?</h2>
-        <p class="section-lead" style="margin: 0 auto;">I'm always glad to discuss AI security, adversarial ML, and forecasting research.</p>
+        <p class="section-lead" style="margin: 0 auto;">I'm interested in collaborations on LLM-agent security, MCP threat modeling, adversarial robustness, and practical defenses.</p>
         <div>
           <a class="btn btn-primary" href="contact.html">Reach out</a>
           <a class="btn btn-ghost" href="projects.html">See projects</a>
