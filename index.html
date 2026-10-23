@@ -29,6 +29,18 @@
     .media-video-frame { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #101820; overflow: hidden; }
     .media-video-frame iframe { display: block; position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
     .media-feature-video figcaption { padding: 9px 16px; font-size: 0.75rem; color: var(--text-muted, #6b7280); }
+    /* The 13News feature shows the supplied story image and embedded video together. */
+    .media-feature--video-story { display: flex; flex-direction: column; }
+    .media-feature--video-story .media-feature-copy { padding-bottom: 22px; }
+    .media-story-media { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; padding: 0 clamp(24px, 4vw, 42px) 30px; align-items: start; }
+    .media-story-image { margin: 0; min-width: 0; }
+    .media-story-image a { display: block; }
+    .media-story-image img { display: block; width: 100%; height: auto; border-radius: 8px; }
+    .media-story-image figcaption, .media-story-media .media-feature-video figcaption { padding: 10px 0 0; font-size: 0.75rem; color: var(--text-muted, #6b7280); }
+    .media-story-media .media-video-frame { border-radius: 8px; }
+    @media (max-width: 760px) {
+      .media-story-media { grid-template-columns: 1fr; gap: 24px; }
+    }
     @media (max-width: 760px) {
       .media-feature { grid-template-columns: 1fr; }
       .media-feature-image img { min-height: 0; aspect-ratio: 16 / 10; }
@@ -91,7 +103,7 @@
           <a href="mailto:mrost004@odu.edu" aria-label="Email" title="Email">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
           </a>
-          <a href="https://scholar.google.com/citations?user=xCv_0REAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar (update link)">
+          <a href="https://scholar.google.com/" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar (update link)">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 1 8l11 6 9-4.9V17h2V8L12 2zM5 13.2v3.3c0 1.9 3.1 3.5 7 3.5s7-1.6 7-3.5v-3.3l-7 3.8-7-3.8z"/></svg>
           </a>
         </div>
@@ -341,34 +353,42 @@
         </div>
       </article>
 
-      <!-- 13News Now video story — publisher-hosted video player -->
-      <article class="card media-feature reveal" style="margin-top: 24px;">
-        <figure class="media-feature-video">
-          <div class="media-video-frame">
-            <iframe src="https://media.13newsnow.com/embeds/video/responsive/291-b033ad97-2fa3-4d2e-b58b-5cdc7d27a6f3/iframe"
-                    title="13News Now: Old Dominion University to offer cybersecurity doctorate program"
-                    loading="lazy"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-                    allowfullscreen></iframe>
-          </div>
-          <figcaption>Video: 13News Now (WVEC) · <a href="https://www.13newsnow.com/video/news/local/mycity/norfolk/old-dominion-university-cybersecurity-doctorate-program/291-b033ad97-2fa3-4d2e-b58b-5cdc7d27a6f3" target="_blank" rel="noopener noreferrer">Open video on 13News Now</a></figcaption>
-        </figure>
+      <!-- 13News Now coverage — screenshot and publisher-hosted video side by side -->
+      <article class="card media-feature media-feature--video-story reveal" style="margin-top: 24px;">
         <div class="media-feature-copy">
-          <span class="eyebrow">13News Now · July 2, 2026 · Video</span>
+          <span class="eyebrow">13News Now · July 2, 2026 · TV News</span>
           <h3>ODU Expands Cybersecurity Education with New Doctoral Program</h3>
-          <p>13News Now reported on Old Dominion University's launch of a Ph.D. program in cybersecurity, highlighting the field's rapid evolution and the importance of interdisciplinary research.</p>
-          <p>The segment offers a look at ODU's cybersecurity research environment, where my work focuses on AI security, LLM agents, and Model Context Protocol security.</p>
+          <p>13News Now reported on Old Dominion University's new Ph.D. program in cybersecurity, highlighting the rapidly evolving field and the value of advanced cybersecurity education and research.</p>
+          <p>The story offers a look inside ODU's cybersecurity research environment, where my doctoral work focuses on AI security, LLM agents, and Model Context Protocol security.</p>
           <div class="proj-links">
-            <a class="pill" href="https://www.13newsnow.com/video/news/local/mycity/norfolk/old-dominion-university-cybersecurity-doctorate-program/291-b033ad97-2fa3-4d2e-b58b-5cdc7d27a6f3" target="_blank" rel="noopener noreferrer">
-              Watch video on 13News Now
+            <a class="pill" href="https://www.13newsnow.com/video/news/local/mycity/norfolk/old-dominion-university-cybersecurity-doctorate-program/291-b033ad97-2fa3-4d2e-b58b-5cdc7d27a6f3" target="_blank" rel="noopener noreferrer">Watch on 13News Now
               <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg>
             </a>
-            <a class="pill" href="https://www.13newsnow.com/article/news/local/mycity/norfolk/old-dominion-university-odu-cybersecurity-phd-norfolk-virginia/291-3aec1079-be70-42bd-8a8b-87429848da0f" target="_blank" rel="noopener noreferrer">
-              Read article
+            <a class="pill" href="https://www.13newsnow.com/article/news/local/mycity/norfolk/old-dominion-university-odu-cybersecurity-phd-norfolk-virginia/291-3aec1079-be70-42bd-8a8b-87429848da0f" target="_blank" rel="noopener noreferrer">Read article
               <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg>
             </a>
           </div>
+        </div>
+        <div class="media-story-media">
+          <figure class="media-story-image">
+            <a href="https://www.13newsnow.com/video/news/local/mycity/norfolk/old-dominion-university-cybersecurity-doctorate-program/291-b033ad97-2fa3-4d2e-b58b-5cdc7d27a6f3" target="_blank" rel="noopener noreferrer" aria-label="Open the 13News Now coverage shown in this screenshot">
+              <img src="assets/media/13news-odu-cybersecurity-phd.png"
+                   alt="13News Now screenshot showing researchers discussing cybersecurity work at computer monitors"
+                   loading="lazy" decoding="async" />
+            </a>
+            <figcaption>Image: 13News Now (WVEC) · <a href="https://www.13newsnow.com/video/news/local/mycity/norfolk/old-dominion-university-cybersecurity-doctorate-program/291-b033ad97-2fa3-4d2e-b58b-5cdc7d27a6f3" target="_blank" rel="noopener noreferrer">View original coverage</a></figcaption>
+          </figure>
+          <figure class="media-feature-video">
+            <div class="media-video-frame">
+              <iframe src="https://media.13newsnow.com/embeds/video/responsive/291-b033ad97-2fa3-4d2e-b58b-5cdc7d27a6f3/iframe"
+                      title="13News Now video: Old Dominion University cybersecurity Ph.D. program"
+                      loading="lazy"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+                      allowfullscreen></iframe>
+            </div>
+            <figcaption>Video: 13News Now (WVEC) · <a href="https://www.13newsnow.com/video/news/local/mycity/norfolk/old-dominion-university-cybersecurity-doctorate-program/291-b033ad97-2fa3-4d2e-b58b-5cdc7d27a6f3" target="_blank" rel="noopener noreferrer">Watch on publisher site</a></figcaption>
+          </figure>
         </div>
       </article>
     </div>
