@@ -45,6 +45,20 @@
       .media-feature { grid-template-columns: 1fr; }
       .media-feature-image img { min-height: 0; aspect-ratio: 16 / 10; }
     }
+
+    /* IEEE TPS 2026 Best Paper Award highlight; photos live in assets/media/. */
+    .award-gallery { min-width: 0; padding: 22px; display: flex; flex-direction: column; gap: 14px; justify-content: center; }
+    .award-gallery figure { margin: 0; min-width: 0; }
+    .award-gallery .award-image-frame { position: relative; width: 100%; aspect-ratio: 16 / 10; overflow: hidden; border-radius: 10px; background: linear-gradient(135deg, #243956, #122032); }
+    .award-gallery .award-image-frame--certificate { aspect-ratio: 16 / 8; background: #eceff3; }
+    .award-gallery .award-image-frame img { display: block; position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .award-gallery .award-image-frame--certificate img { object-fit: contain; }
+    .award-image-fallback { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; color: #fff; text-align: center; padding: 24px; }
+    .award-image-fallback .award-cup { font-size: 3.25rem; line-height: 1; }
+    .award-image-fallback strong { font-family: 'Newsreader', Georgia, serif; font-size: 1.6rem; font-weight: 600; }
+    .award-image-fallback span:last-child { font-size: 0.85rem; opacity: 0.85; }
+    .award-gallery figcaption { padding: 9px 2px 0; color: var(--text-muted, #6b7280); font-size: 0.75rem; }
+    @media (max-width: 760px) { .award-gallery { padding: 18px; } }
   </style>
 </head>
 <body>
@@ -339,6 +353,48 @@
         <h2 class="section-title">News &amp; Media Highlights</h2>
         <p class="section-lead">University news and media coverage featuring my research and academic collaborations.</p>
       </div>
+
+      <!-- IEEE TPS 2026 Best Paper Award: put your photos in assets/media/ -->
+      <article class="card media-feature media-feature--award reveal" style="margin-top: 28px;">
+        <div class="award-gallery">
+          <figure>
+            <div class="award-image-frame">
+              <div class="award-image-fallback" aria-hidden="true">
+                <span class="award-cup">🏆</span>
+                <strong>Best Paper Award</strong>
+                <span>IEEE TPS 2026</span>
+              </div>
+              <img src="assets/media/ieee-tps-2026-best-paper.jpg"
+                   alt="Mehrdad Rostamzadeh at IEEE TPS 2026 with the Best Paper Award"
+                   loading="lazy" decoding="async"
+                   onerror="this.style.display='none'" />
+            </div>
+            <figcaption>Best Paper Award · IEEE TPS 2026 · San Jose, California</figcaption>
+          </figure>
+          <!-- Optional second photo: upload a certificate photo using this exact filename. -->
+          <figure>
+            <div class="award-image-frame award-image-frame--certificate">
+              <img src="assets/media/ieee-tps-2026-award-certificate.jpg"
+                   alt="IEEE TPS 2026 Best Paper Award certificate for TrustShiftProbe"
+                   loading="lazy" decoding="async"
+                   onerror="this.closest('figure').style.display='none'" />
+            </div>
+            <figcaption>Best Paper Award certificate · IEEE TPS 2026</figcaption>
+          </figure>
+        </div>
+        <div class="media-feature-copy">
+          <span class="eyebrow">Research recognition · IEEE TPS 2026 · November 2026</span>
+          <h3>Honored to Receive the Best Paper Award at IEEE TPS 2026</h3>
+          <p>I was honored that our paper, <strong>“TrustShiftProbe: Characterizing, Benchmarking, and Defending Staged Trust Attacks on MCP Servers,”</strong> received the <strong>Best Paper Award</strong> at the 2026 IEEE International Conference on Trust, Privacy and Security (TPS), held in the San Jose, California area.</p>
+          <p>Our research studies how malicious Model Context Protocol (MCP) servers can establish trust through benign behavior before shifting to malicious actions. We also introduce <strong>SHIELD</strong>, a defense designed to help detect and mitigate these staged trust attacks.</p>
+          <p>I'm grateful to my advisor, Prof. Daniel Takabi, and my coauthors, Sidhant Narula and Mohammad Ghasemigol, for their collaboration and support.</p>
+          <div class="proj-links">
+            <a class="pill" href="https://tps.ieee-cs.org/2026/" target="_blank" rel="noopener noreferrer">IEEE TPS 2026 Conference ↗</a>
+            <a class="pill" href="https://tps.ieee-cs.org/2026/accepted-papers/" target="_blank" rel="noopener noreferrer">Accepted Papers ↗</a>
+            <a class="pill" href="https://arxiv.org/abs/2608.23763" target="_blank" rel="noopener noreferrer">Read TrustShiftProbe ↗</a>
+          </div>
+        </div>
+      </article>
 
       <article class="card media-feature reveal" style="margin-top: 28px;">
         <figure class="media-feature-image">
